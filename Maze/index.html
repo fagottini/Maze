@@ -1,0 +1,60 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <title>Through The Space</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="shortcut icon" sizes="32x32" href="favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    </head>
+
+    <body onload = "textApear(); showInfo();">
+		<audio style="display:none" loop>
+			<source src="music/Vicetone _ Tony Igy - Astronomia.mp3" type="audio/mpeg"/>
+		</audio>
+        <div id="header">
+            <span id="game_title"></span>
+        </div>
+        <div id="main">
+            <div id="leftbox">
+                <div id="planetA" title="Hi i am Jupiter" >
+                    <img id="jupiter" src="img/jupiter/jupiter.png" draggable="false" onclick="genPlanetA()">
+                </div>
+                <div id="planetB" title="Hi i am Mars">
+                    <img id="mars" src="img/mars/mars.png"  draggable="false" onclick="genPlanetB()">
+                </div>
+         
+            </div>
+            <div id="rightbox">
+                <div id="planetC" title="Hi i am Venus">
+                    <img id="venus" src="img/venus/venus.png" draggable="false" onclick="genPlanetC()">
+                </div>
+                <div id="planetD" title="Hi i am Neptune">
+                    <img id="neptune"src="img/neptune/neptune.png"  draggable="false" onclick="genPlanetD()">
+                </div>
+            </div>
+            <div id="container">
+                <canvas id="canvas" oncontextmenu="return false;"></canvas>
+                <div id="inside_rightbox">
+                    <div id="buttons">
+                        <img src="img/icons/audio-icon.png" id="audio" draggable="false"/>
+                        <img src="img/icons/global-icon.png" id="info" draggable="false" onclick="showInfo();"/>
+                    </div>
+
+                    <div id="timer_box">
+                        <span id="timer_title">Timer</span><br>
+                        <span id="timer">00:00</span>
+                    </div>
+                    <div id="ship_box">
+                        <img src="img/spaceship/spaceship.png" draggable="false" id="spaceship"/>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    <script src = "js/script.js"></script>
+    <script src = "js/labirinth.js"></script>
+    <script src = "js/text.js"></script>
+    <script src = "js/timer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    </body>
+    
+</html>

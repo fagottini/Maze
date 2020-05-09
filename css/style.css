@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Oxanium', cursive;
+    user-select: none;
+    height: 100%;
+    overflow: hidden;
+    background-color: #330033;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='432' height='432' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1.8'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='7'/%3E%3Ccircle cx='539' cy='269' r='7'/%3E%3Ccircle cx='603' cy='493' r='7'/%3E%3Ccircle cx='731' cy='737' r='7'/%3E%3Ccircle cx='520' cy='660' r='7'/%3E%3Ccircle cx='309' cy='538' r='7'/%3E%3Ccircle cx='295' cy='764' r='7'/%3E%3Ccircle cx='40' cy='599' r='7'/%3E%3Ccircle cx='102' cy='382' r='7'/%3E%3Ccircle cx='127' cy='80' r='7'/%3E%3Ccircle cx='370' cy='105' r='7'/%3E%3Ccircle cx='578' cy='42' r='7'/%3E%3Ccircle cx='237' cy='261' r='7'/%3E%3Ccircle cx='390' cy='382' r='7'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+::-webkit-scrollbar{
+    display:none;
+}
+
+#header{
+    margin-top: 3em;
+    text-align: center;
+}
+#game_title{
+    text-shadow: -3px 0 #63015b, 0 3px #63015b, 3px 0 #63015b, 0 -3px #63015b;
+    letter-spacing: 3px;
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+
+}
+
+#main{
+    margin-top: 3em;
+    width: 100%;
+    height:38em;
+}
+#leftbox{
+    float: left;
+    width: 29%;
+    height: 100%;
+}
+
+#planetA{
+    margin-top: 6em;
+    margin-left: 50%;
+}
+#planetB{
+    margin-top: 13em;
+    margin-left: 20%;
+}
+
+
+#rightbox{
+    float:right;
+    width: 25%;
+    height: 100%;
+}
+#planetC{
+    margin-top: -100px;
+    margin-left: 30%;
+}
+#planetD{
+    margin-top: 15em;
+    margin-left: 35%;
+}
+#neptune{
+    width: 140px;
+    height: 140px;
+}
+#jupiter{
+    width: 170px;
+    height: 170px;
+}
+#mars{
+    width: 70px;
+    height: 70px;;
+}
+#venus{
+    width: 100px;
+    height: 100px;
+}
+
+#neptune, #jupiter, #mars, #venus{
+    transition: transform 0.4s ease-in-out;
+    border-radius: 50%;
+    box-shadow: 0px 3px 60px -5px black;
+}
+#neptune:hover, #jupiter:hover, #mars:hover, #venus:hover{
+    transform: scale(1.1) rotate(360deg);
+    transition-property: transform, box-shadow;
+    transition-duration: 0.7s;
+    cursor: pointer;
+    box-shadow: 0px 3px 60px -12px white;
+}
+
+
+
+#container{
+    float: left;
+    border: 3px solid black;
+    width: 800px;
+    height: 600px;
+    box-shadow: 2px 2px 33px 20px rgba(0,0,0,0.52);
+
+}
+#canvas{
+    float: left;
+    height: 100%;
+    width: 75%;
+    border-right: 2px solid black
+}
+#inside_rightbox{
+    float:right;
+    height: 100%;
+    width: 24%;
+}
+#timer_box{
+    margin: 4em auto 4em;
+    text-align: center; 
+    width: 100%;
+    height: 6em;
+}
+#timer_title{
+    display: inline-block;
+    width: 50%;
+    color: white;
+    font-size: 24px;
+    border-bottom: 2px solid white;
+
+}
+#timer{
+    margin-top: 5px;
+    display: inline-block;
+    width: 50%;
+    color: white;
+    font-size: 20px;
+}
+#buttons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    width: 100%;
+    height: 50px;
+    
+}
+
+#info{
+    margin-left: 35%;
+    background-color: #63015b;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    box-shadow: 2px 0px 26px 0px rgba(0,0,0,0.75);
+    border-radius: 2px;
+    transition: border 0.3s;
+}
+#reset_button{
+    text-align: center;
+}
+#reset_title{
+    background-color: #63015b;
+    font-size: 20px;
+    padding: 5px 20% 5px;
+    border: 2px solid black;
+    box-shadow: 2px 0px 26px 0px rgba(0,0,0,0.75);
+    transition: border 0.3s;
+    border-radius: 2px;
+}
+
+#audio:hover, #info:hover, #reset_title:hover{
+    border: 2px solid white;
+    transition: border 0.3s;
+    
+}
+#ship_box{
+    height: 190px;
+    width: 190px;
+    
+}
+#spaceship{
+    padding-top: 5em;
+    height: 190px;
+    width: 190px;
+}
+
+@media screen and (max-width: 1750px) {
+
+    #leftbox {
+      width: 29%;
+    }
+    #planetA{
+        margin-left: 35%;
+    }
+    #rightbox{
+        width: 15%;
+    }
+    #planetC{
+        margin-left: 25%;
+    }
+    #planetD{
+        margin-left: 30%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+
+    #leftbox {
+      width: 20%
+    }
+    #planetA{
+        margin-left: 25%;
+    }
+    #rightbox{
+        width: 18%;
+    }
+  }
